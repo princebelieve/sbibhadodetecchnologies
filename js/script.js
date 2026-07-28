@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 index += 1;
             } else {
                 clearInterval(typeInterval);
+                cursor.style.display = 'none';
             }
         }, typeSpeed);
     });
