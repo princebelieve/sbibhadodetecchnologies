@@ -28,10 +28,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.2,
+        threshold: 0.18,
     });
 
     revealElements.forEach(el => {
         revealObserver.observe(el);
+    });
+
+    const typedElements = document.querySelectorAll('.typed');
+    typedElements.forEach(el => {
+        const text = el.dataset.text || '';
+        const textNode = document.createElement('span');
+        textNode.className = 'typed-text';
+        el.appendChild(textNode);
+
+        const cursor = document.createElement('span');
+        cursor.className = 'typing-cursor';
+        cursor.textContent = '|';
+        el.appendChild(cursor);
+
+        let index = 0;
+        const typeSpeed = 35;
+        const typeInterval = setInterval(() => {
+            if (index <= text.length) {
+                textNode.textContent = text.slice(0, index);
+                index += 1;
+            } else {
+                clearInterval(typeInterval);
+            }
+        }, typeSpeed);
     });
 });
