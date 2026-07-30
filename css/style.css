@@ -357,11 +357,14 @@ img { max-width: 100%; display: block; }
 .section-header p { font-size: 1rem; line-height: 1.8; }
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    justify-items: center;
 }
 .project-card {
     background: #fff;
+    width: 100%;
+    max-width: 900px; /* Adjust between 800px and 1000px if desired */
     padding: 32px;
     border-radius: 22px;
     border: 1px solid #e2e8f0;
@@ -369,10 +372,6 @@ img { max-width: 100%; display: block; }
     transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
     position: relative;
 }
-.project-card:nth-child(2) { transform: translateY(10px); }
-.project-card:nth-child(3) { transform: translateY(20px); }
-.project-card:nth-child(4) { transform: translateY(10px); }
-.project-card:nth-child(5) { transform: translateY(0); }
 .project-card:hover { transform: translateY(-8px) scale(1.01); border-color: #c7d2fe; box-shadow: 0 26px 55px rgba(15,23,42,0.12); z-index: 2; }
 .project-icon {
     width: 56px;
