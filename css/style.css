@@ -41,6 +41,10 @@ img { max-width: 100%; display: block; }
 .hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: #111; transition: transform 0.3s ease; }
 .hamburger.open { transform: rotate(90deg); }
 .nav-links.active { display: flex; }
+.nav-links { align-items: center; }
+.nav-links a.stockroom-nav { display: inline-flex; padding: 10px 18px; border-radius: 999px; background: #2563eb; color: #fff; border: 0; }
+.nav-links a.stockroom-nav:hover,
+.nav-links a.stockroom-nav:focus-visible { background: #1d4ed8; }
 
 /* --- HERO SECTION --- */
 .hero {
@@ -57,6 +61,9 @@ img { max-width: 100%; display: block; }
 .highlight { color: #60a5fa; }
 .hero-copy { font-size: 1.05rem; max-width: 590px; margin-bottom: 32px; color: #d1d5db; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; }
+.stockroom-promo { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.16); }
+.stockroom-promo p { margin-bottom: 16px; color: #d1d5db; }
+.stockroom-promo .btn { box-sizing: border-box; max-width: 100%; justify-content: center; text-align: center; }
 .hero-panel {
     display: grid;
     gap: 24px;
