@@ -138,8 +138,7 @@ img { max-width: 100%; display: block; }
     margin-left: auto;
 }
 .hero-image-card img,
-.hero-image-card iframe,
-.project-card iframe {
+.hero-image-card iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -263,6 +262,12 @@ img { max-width: 100%; display: block; }
     object-position: center;
     border-radius: 18px;
     margin-bottom: 22px;
+}
+.project-card iframe.project-thumb {
+    display: block;
+    height: auto;
+    min-height: 240px;
+    border: 0;
 }
 
 /* --- REVEAL ANIMATION --- */
