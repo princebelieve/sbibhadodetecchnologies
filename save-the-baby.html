@@ -15,6 +15,11 @@
     .game-mark { width: 86px; height: 86px; margin: 0 auto 22px; display: grid; place-items: center; border-radius: 24px; color: #fff; font-size: 2.2rem; background: linear-gradient(145deg, #2563eb, #173d89); box-shadow: 0 12px 28px #2563eb44; }
     .game-panel h1 { margin: 0 0 12px; color: #10213d; font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1.05; }
     .game-panel p { max-width: 570px; margin: 0 auto 28px; color: #52647d; font-size: 1.1rem; line-height: 1.8; }
+    .story-briefing { margin: 34px 0; padding: 28px 0; border-top: 1px solid #dbe5f4; border-bottom: 1px solid #dbe5f4; text-align: left; }
+    .story-briefing h2 { margin: 0 0 18px; color: #10213d; font-size: clamp(1.5rem, 5vw, 2rem); line-height: 1.25; }
+    .game-panel .story-briefing p { max-width: none; margin: 0 0 18px; font-size: 1rem; }
+    .game-panel .story-briefing p:last-child { margin-bottom: 0; }
+    .story-briefing strong { color: #10213d; }
     .game-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
     .game-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: #2563eb; color: #fff; font-weight: 700; text-decoration: none; }
     .game-actions a.secondary { background: #edf3ff; color: #1d4ed8; }
@@ -31,6 +36,13 @@
       <p class="eyebrow">S. B. Ibhadode Technologies / Save The Baby home page</p>
       <h1 id="game-title">Save The Baby</h1>
       <p>Step into a story-driven match-3 adventure. Solve puzzles, collect keys, and help uncover each case in this single-player mobile game.</p>
+      <section class="story-briefing" aria-labelledby="story-title">
+        <h2 id="story-title">The story behind the search</h2>
+        <p>Amara built a new life after her long relationship with Victor ended. Ethan, her young son, was born from a later relationship with a wealthy man who provided for mother and child before his death. Amara then found love with David, a web developer and hacker who believes every system can be decoded.</p>
+        <p>Victor expected Amara to return to him. Instead, she chose her own future. Unable to accept her independence, he claims credit for the life she has and takes Ethan, turning his resentment into a threat: <strong>&ldquo;My money or Ethan.&rdquo;</strong> David joins Amara in the search for her child, but technical skill alone cannot tell them whom to trust.</p>
+        <p><strong>How will you begin?</strong> Call the police and bring Detective Morris into the investigation, trace Victor&rsquo;s signal, or go after Victor alone. Match tiles, clear obstacles and uncover evidence as Amara and David follow the trail.</p>
+        <p>The mystery unfolds in episodes across more than 1,000 puzzle levels. Every clue brings new hope, and every turn could lead David into Victor&rsquo;s next trap. <strong>Will Ethan be found safe? Will David return alive? And how far will Amara go to bring her son home?</strong> Play to uncover what happens next.</p>
+      </section>
       <div class="game-actions">
         <a href="/" aria-label="Back to S. B. Ibhadode Technologies">Company website</a>
         <a class="secondary" href="mailto:info@sbi.globalcreest.com">Contact the developer</a>
