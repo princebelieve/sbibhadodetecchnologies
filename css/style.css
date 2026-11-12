@@ -279,22 +279,30 @@ img { max-width: 100%; display: block; }
 
 /* --- REVEAL ANIMATION --- */
 .reveal {
-    opacity: 0;
-    transform: translateY(30px);
+    /* Content remains visible when scripts fail or rendering is delayed. */
+    opacity: 1;
+    transform: none;
     transition: opacity 0.85s ease, transform 0.85s ease;
 }
 .reveal.visible {
-    opacity: 1;
-    transform: translate(0, 0);
+    animation: reveal-in 0.85s ease both;
+    transform: none;
+}
+@keyframes reveal-in {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal.visible { animation: none; }
 }
 .slide-in-left {
-    transform: translateX(-45px);
+    transform: none;
 }
 .slide-in-right {
-    transform: translateX(45px);
+    transform: none;
 }
 .slide-in-up {
-    transform: translateY(45px);
+    transform: none;
 }
 .typed {
     display: inline-flex;

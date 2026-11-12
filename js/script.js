@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const typedElements = document.querySelectorAll('.typed');
     typedElements.forEach(el => {
-        const text = el.dataset.text || '';
+        const text = el.textContent.trim() || el.dataset.text || '';
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        el.replaceChildren();
         const textNode = document.createElement('span');
         textNode.className = 'typed-text';
         el.appendChild(textNode);
