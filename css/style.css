@@ -1,6 +1,9 @@
 /* --- GLOBAL STYLES --- */
+/* Keep sizing reliable even when an extensionless reference stylesheet is rejected. */
+*, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
+    margin: 0;
     background: #f4f7fb;
     color: #111;
     overflow-x: hidden;
