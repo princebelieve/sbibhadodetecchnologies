@@ -21,3 +21,11 @@ On 2026-11-12 the public home, services, contact and game pages returned HTTP 20
 Introductory copy is now included in the HTML instead of relying solely on JavaScript. Reveal sections remain readable when scripts fail, with animations and reduced-motion support preserved.
 
 These checks do not establish Google's indexed status or exclusion reason. Search Console's URL Inspection report is needed for Google's selected canonical, last crawl, crawl/indexing verdict and exclusion details. Repeated indexing requests do not guarantee indexing.
+
+## Playable preview and video
+
+The homepage now embeds `/save-the-baby/play`; the game landing page embeds the same short promotional preview plus a directly hosted animated gameplay video. `vercel.json` maps the playable route to `playable/index.html`.
+
+The preview uses real game artwork and a separate compact HTML5 match-three implementation. It supports tile swaps, key objectives, cascades, rockets, optional sound and a post-play Google Play action. It is explicitly a preview, not the full Godot game; no demo progress is saved.
+
+Rebuild packages from the game workspace using `python tools/build_playable.py`, then copy `exports/marketing-v9/playable/web/index.html` into this repository's `playable/index.html`. Network-specific ad packages remain in the game workspace. Upload instructions are recorded in the game project's `docs/Playable_Ad_and_Video_Uploads.md`. No ad campaign or advertising spend is initiated by this website.

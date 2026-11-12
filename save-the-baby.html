@@ -26,6 +26,13 @@
     .game-actions a.play-store { min-height: 56px; gap: 10px; background: #10213d; box-shadow: 0 8px 20px #10213d25; }
     .game-actions a.play-store:hover { background: #25456c; }
     .game-actions a:focus-visible { outline: 3px solid #f0b94c; outline-offset: 4px; }
+    .preview-section { margin-top: 32px; }
+    .preview-section h2 { color: #10213d; font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 12px; }
+    .game-panel .preview-section p { font-size: 1rem; line-height: 1.6; margin-bottom: 16px; }
+    .playable-frame { display: block; width: 100%; height: 740px; border: 0; border-radius: 20px; background: #11293b; }
+    .preview-link { display: inline-block; margin-top: 14px; color: #1d4ed8; text-decoration: underline; }
+    .preview-section video { display: block; width: 100%; border-radius: 16px; background: #11293b; }
+    @media (max-width: 480px) { .game-panel { padding: 24px 12px; } .game-landing { padding: 24px 10px; } }
     .legal-footer { padding: 24px 16px; background: #0f172a; color: #cbd5e1; text-align: center; }
     .legal-footer a { color: #fff; margin: 0 8px; }
     .legal-footer p { margin: 6px 0; }
@@ -42,6 +49,19 @@
       <div class="game-actions">
         <a class="play-store" href="https://play.google.com/store/apps/details?id=com.savethebaby.game" aria-label="Get Save The Baby on Google Play"><span aria-hidden="true">&#9654;</span> Get it on Google Play</a>
       </div>
+      <section class="preview-section" aria-labelledby="preview-title">
+        <h2 id="preview-title">Play a little. Follow the clues.</h2>
+        <p>Swap matching pieces, collect keys and try a rocket. This short preview introduces the puzzle action; the complete adventure and restoration challenges are in the Android game.</p>
+        <iframe class="playable-frame" src="/save-the-baby/play" title="Save The Baby interactive match-3 preview" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        <a class="preview-link" href="/save-the-baby/play" target="_blank" rel="noopener">Open the playable preview in a full window</a>
+      </section>
+      <section class="preview-section" aria-labelledby="trailer-title">
+        <h2 id="trailer-title">See the adventure in motion</h2>
+        <video controls playsinline preload="none" poster="/media/save-the-baby-poster.jpg" aria-label="Save The Baby animated gameplay ad">
+          <source src="/media/save-the-baby-animated-ad.mp4" type="video/mp4">
+          <a href="/media/save-the-baby-animated-ad.mp4">Watch the gameplay video</a>
+        </video>
+      </section>
       <section class="story-briefing" aria-labelledby="story-title">
         <h2 id="story-title">The story behind the search</h2>
         <p>Amara built a new life after her long relationship with Victor ended. Ethan, her young son, was born from a later relationship with a wealthy man who provided for mother and child before his death. Amara then found love with David, a web developer and hacker who believes every system can be decoded.</p>

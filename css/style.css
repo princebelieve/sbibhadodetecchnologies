@@ -519,3 +519,5 @@ footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 24px 
 .game-project-preview i { font-size: 2.2rem; color: #f2c46d; }
 .game-project-preview strong { font-size: clamp(1.3rem, 4vw, 2rem); }
 .game-project-preview small { color: #e7eef8; font-size: .95rem; }
+/* The embedded game needs room for its board, instructions and install action. */
+.project-card iframe.game-playable-preview { width: 100%; height: 740px; border: 0; background: #11293b; border-radius: 18px; }
